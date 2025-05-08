@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S小姐6月泰国之旅酒店甄选</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f1ea; /* Sandy beige background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .brochure-header {
+            background: linear-gradient(to right, #007991, #78ffd6); /* Teal to mint gradient */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid #ffc107; /* Sunny yellow accent */
+        }
+
+        .brochure-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .brochure-header p {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        .brochure-content {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .destination-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .destination-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: #005f73; /* Darker teal */
+            font-size: 2em;
+            border-bottom: 2px solid #ade8f4; /* Light blue accent */
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .hotel-card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            overflow: hidden; /* Ensures image corners are rounded if image itself isn't */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .hotel-card img {
+            width: 100%;
+            height: 300px; /* Fixed height for consistency */
+            object-fit: cover; /* Crop image to fit */
+            display: block;
+            border-bottom: 3px solid #ffc107; /* Sunny yellow separator */
+        }
+
+        .hotel-info {
+            padding: 20px;
+        }
+
+        .hotel-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #d9534f; /* Coral red for hotel names */
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .hotel-info p, .hotel-info ul {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+
+        .location, .check-in, .opening-year, .rating {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .price-details {
+            background-color: #e9f5db; /* Light green for price section */
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border-left: 4px solid #7cb342; /* Darker green accent */
+        }
+
+        .price-details p {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .price-details ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+
+        .facilities p {
+            margin-bottom: 8px;
+        }
+
+        .facilities strong {
+            color: #0288d1; /* Blue for facility type */
+        }
+
+        .pros-cons {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #ccc;
+        }
+
+        .pros {
+            color: #2e7d32; /* Green for pros */
+        }
+
+        .cons {
+            color: #c62828; /* Red for cons */
+        }
+
+        .fully-booked {
+            color: #e53935; /* Red for fully booked */
+            font-weight: bold;
+            background-color: #ffebee;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        .brochure-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #f4f1ea;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+        
+        .image-disclaimer {
+            font-size: 0.8em;
+            color: #777;
+            text-align: center;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .brochure-header h1 {
+                font-size: 2.2em;
+            }
+            .destination-section h2 {
+                font-size: 1.8em;
+            }
+            .hotel-info h3 {
+                font-size: 1.5em;
+            }
+            .hotel-card img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="brochure-header">
+        <h1>🌴 热带风情五星级酒店甄选 🏝️</h1>
+        <p>探索清迈与苏梅岛的顶级奢华下榻之所</p>
+    </header>
+
+    <main class="brochure-content">
+
+        <section class="destination-section">
+            <h2>第一部分: 清迈五星级酒店推荐</h2>
+
+            <article class="hotel-card">
+                <span class="image-disclaimer"></span>
+                <div class="hotel-info">
+                    <h3>清迈四季度假酒店 (Four Seasons Resort Chiang Mai)</h3>
+                    <p class="location">📍 <strong>位置:</strong> 湄林 (Mae Rim), 离古城约30-40分钟车程</p>
+                    <p class="check-in">📅 <strong>入住日期推荐:</strong> 6月24/25 (前10天便宜100/晚)</p>
+                    <div class="price-details">
+                        <p>💰 <strong>最低价格 (RMB税后):</strong> </p>
+                        <ul>
+                            <li>两晚8折，三晚75折；可升房</li>
+                            <li>三晚</li>
+                            <li>单卧室日落泳池别墅: ¥3086/晚</li>
+                            <li>海景单卧室泳池别墅: ¥3436/晚</li>
+                            <li>五岛景单卧室泳池别墅: ¥3778/晚</li>
+                            <li>两晚</li>
+                            <li>单卧室日落泳池别墅: ¥4536/晚</li>
+                            <li>海景单卧室泳池别墅: ¥5051/晚</li>
+                            <li>五岛景单卧室泳池别墅: ¥5567/晚</li>
+                        </ul>
+                    </div>
+                    <div class="facilities">
+                        <p>👨‍👩‍👧‍👦 <strong>亲子设施:</strong> La Koco 儿童俱乐部 (4-12岁, 活动丰富如稻田体验、水牛喂养、手工艺制作), 儿童泳池, 儿童菜单, 自行车, 家庭烹饪课程。</p>
+                        <p>🧘‍♂️ <strong>成人设施:</strong> The Spa 水疗中心, 健身房, 网球场, 瑜伽课程, 2个成人泳池, RATRISAWAK 烹饪学校, KHAO by Four Seasons 泰北餐厅。</p>
+                    </div>
+                    <p class="opening-year">🕰️ <strong>开店时间:</strong> 1995年</p>
+                    <p class="rating">⭐ <strong>综合评分:</strong> 4.9/5</p>
+                    <div class="pros-cons">
+                        <p class="pros">👍 <strong>推荐理由:</strong> 稻田环绕的奢华度假村, 体验泰北田园风光, 服务顶级, 亲子活动丰富。</p>
+                        <p class="cons">⚠️ <strong>缺点:</strong> 价格昂贵; 位置离市区较远, 出行依赖酒店车辆或预订车辆。</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="hotel-card">
+                 <span class="image-disclaimer"></span>
+                <div class="hotel-info">
+                    <h3>清迈安纳塔拉度假酒店 (Anantara Chiang Mai Resort)</h3>
+                    <p class="location">📍 <strong>位置:</strong> 湄平河畔 (Riverside), 近夜市</p>
+                    <p class="check-in">📅 <strong>入住日期推荐:</strong> <span class="fully-booked">满房</span> </p>
+                    <div class="price-details">
+                        <p>💰 <strong>最低价格 (RMB税后):</strong>  (满房)</p>
+                    </div>
+                    <div class="facilities">
+                        <p>👨‍👩‍👧‍👦 <strong>亲子设施:</strong> 儿童俱乐部 (较小型, 提供一些玩具和活动), 儿童泳池, 儿童菜单, 可安排保姆服务。</p>
+                        <p>🧘‍♂️ <strong>成人设施:</strong> Anantara Spa, 健身中心, 河畔泳池, The Service 1921 餐厅与酒吧 (前英国领事馆), Bodhi Terrace 泰式餐厅。</p>
+                    </div>
+                    <p class="opening-year">🕰️ <strong>开店时间:</strong> 2005年 (前身为The Chedi)</p>
+                    <p class="rating">⭐ <strong>综合评分:</strong> 4.7/5</p>
+                    <div class="pros-cons">
+                        <p class="pros">👍 <strong>推荐理由:</strong> 河畔殖民风格建筑, 位置便利, 设计优雅, 服务周到, 闹中取静。</p>
+                        <p class="cons">⚠️ <strong>缺点:</strong> 风格偏商务化, 儿童俱乐部规模不大, 活动相对基础。</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="hotel-card">
+                 <span class="image-disclaimer"></span>
+                <div class="hotel-info">
+                    <h3>清迈香格里拉大酒店 (Shangri-La Hotel, Chiang Mai)</h3>
+                    <p class="location">📍 <strong>位置:</strong> 长康路 (Chang Klan Road), 近夜市</p>
+                    <p class="check-in">📅 <strong>入住日期推荐:</strong> 6月底价格稳定</p>
+                    <div class="price-details">
+                        <p>💰 <strong>最低价格 (RMB税后):</strong> </p>
+                        <ul>
+                            <li>豪华客房: ¥1038/晚</li>
+                            <li>豪华露台客房: ¥1078/晚</li>
+                            <li>豪华泳池景客房: ¥1078/晚</li>
+                        </ul>
+                    </div>
+                    <div class="facilities">
+                        <p>👨‍👩‍👧‍👦 <strong>亲子设施:</strong> 儿童俱乐部 (有滑梯、球池等), 大型户外泳池设有儿童浅水区和水滑梯, 儿童菜单, 户外游乐区。</p>
+                        <p>🧘‍♂️ <strong>成人设施:</strong> Chi, The Spa, 健身中心, 网球场, 桑拿蒸汽, Kad Kafe 自助餐厅, China Kitchen 中餐厅。</p>
+                    </div>
+                    <p class="opening-year">🕰️ <strong>开店时间:</strong> 2007年</p>
+                    <p class="rating">⭐ <strong>综合评分:</strong> 4.5/5</p>
+                    <div class="pros-cons">
+                        <p class="pros">👍 <strong>推荐理由:</strong> 位置便利, 设施齐全, 拥有清迈最大的自由形态泳池之一, 亲子设施较完善。</p>
+                        <p class="cons">⚠️ <strong>缺点:</strong> 酒店部分区域可能略显年代感; 高峰期泳池人较多。</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="hotel-card">
+                 <span class="image-disclaimer"></span>
+                <div class="hotel-info">
+                    <h3>清迈微笑兰纳酒店 (Smile Lanna Hotel)</h3>
+                    <p class="location">📍 <strong>位置:</strong> 清迈古城南门外附近, 靠近周六夜市</p>
+                    <p class="check-in">📅 <strong>入住日期推荐:</strong> 6月底</p>
+                    <div class="price-details">
+                        <p>💰 <strong>最低价格 (RMB税后):</strong> </p>
+                        <ul>
+                            <li>豪华房: ¥795</li>
+                            <li>至尊豪华房: ¥994</li>
+                            <li>家庭套房: ¥2020</li>
+                        </ul>
+                    </div>
+                    <div class="facilities">
+                        <p>👨‍👩‍👧‍👦 <strong>亲子设施:</strong> 户外游泳池 (有浅水区), 可提供婴儿床, 部分家庭房型空间较大。</p>
+                        <p>🧘‍♂️ <strong>成人设施:</strong> 户外游泳池, 餐厅, 大堂吧, 健身房 (可能较小), 免费Wi-Fi, 旅游咨询。</p>
+                    </div>
+                    <p class="opening-year">🕰️ <strong>开店时间:</strong> 2018年</p>
+                    <p class="rating">⭐ <strong>综合评分:</strong> 4.5/5</p>
+                    <div class="pros-cons">
+                        <p class="pros">👍 <strong>推荐理由:</strong> 浓郁兰纳建筑风格和文化体验, 设计精美, 位置便利, 性价比高。</p>
+                        <p class="cons">⚠️ <strong>缺点:</strong> 按精品/四星标准: 设计、文化氛围、服务和位置出色, 性价比高。按五星标准: 设施和亲子专业性有差距。</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="destination-section">
+            <h2>第二部分: 苏梅岛五星级酒店推荐</h2>
+
+            <article class="hotel-card">
+                 <span class="image-disclaimer"></span>
+                <div class="hotel-info">
+                    <h3>苏梅岛六善酒店 (Six Senses Samui)</h3>
+                    <p class="location">📍 <strong>位置:</strong> 曾蒙海滩/普莱兰半岛 (Choeng Mon/Plai Laem)</p>
+                    <p class="check-in">📅 <strong>入住日期推荐:</strong> 6月底</p>
+                    <div class="price-details">
+                        <p>💰 <strong>最低价格 (RMB税后):</strong> </p>
+                        <ul>
+                            <li>隐逸别墅: ¥3532/晚</li>
+                            <li>泳池别墅: ¥6121/晚</li>
+                            <li>海景泳池别墅: ¥7090/晚</li>
+                        </ul>
+                    </div>
+                    <div class="facilities">
+                        <p>👨‍👩‍👧‍👦 <strong>亲子设施:</strong> “Grow With Six Senses”儿童项目 (提供自然探索、手工艺等活动, 但非固定儿童俱乐部形式), 儿童菜单, 保姆服务, 别墅内私人泳池。</p>
+                        <p>🧘‍♂️ <strong>成人设施:</strong> Six Senses Spa, Dining on the Rocks 餐厅 (招牌), Drinks on the Hill/Deck 酒吧, 无边泳池, 健身房, 瑜伽亭, 电影放映, 烹饪课程, 水上活动。</p>
+                    </div>
+                    <p class="opening-year">🕰️ <strong>开店时间:</strong> 2004年</p>
+                    <p class="rating">⭐ <strong>综合评分:</strong> 4.8/5</p>
+                    <div class="pros-cons">
+                        <p class="pros">👍 <strong>推荐理由:</strong> 生态奢华, 无敌海景, 私密性高, 可持续发展理念, 个性化管家服务, 屡获殊荣的餐饮。</p>
+                        <p class="cons">⚠️ <strong>缺点:</strong> 价格昂贵; 度假村内坡度较大, 位置偏远, 需依赖电瓶车; 海滩非酒店私有, 且较小。亲子设施不算丰富。</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="hotel-card">
+                 <span class="image-disclaimer"></span>
+                <div class="hotel-info">
+                    <h3>苏梅岛四季酒店 (Four Seasons Resort Koh Samui)</h3>
+                    <p class="location">📍 <strong>位置:</strong> 拉迈海滩西北角邦珀湾 (Bang Po/Laem Yai Bay)</p>
+                    <p class="check-in">📅 <strong>入住日期推荐:</strong> 6月底</p>
+                    <div class="price-details">
+                        <p>💰 <strong>最低价格 (RMB税后):</strong> </p>
+                        <ul>
+                            <li>单卧室泳池别墅: ¥9175/晚</li>
+                            <li>豪华单卧室泳池别墅: ¥12646/晚</li>
+                            <li>尊贵单卧室泳池别墅: ¥13541/晚</li>
+                            <li>家庭泳池别墅: ¥17801/晚</li>
+                        </ul>
+                    </div>
+                    <div class="facilities">
+                        <p>👨‍👩‍👧‍👦 <strong>亲子设施:</strong> Kids For All Seasons 儿童俱乐部 (活动丰富, 如泰拳、烹饪、艺术手工), 儿童泳池, 家庭活动 (如沙滩游戏、电影之夜), 儿童菜单, 保姆服务。</p>
+                        <p>🧘‍♂️ <strong>成人设施:</strong> The Secret Garden Spa, 健身中心, 网球场, 私人沙滩, 无边泳池, KOH 泰式餐厅, Pla Pla 地中海餐厅, CoCoRum 酒吧, 水上运动中心。</p>
+                    </div>
+                    <p class="opening-year">🕰️ <strong>开店时间:</strong> 2007年</p>
+                    <p class="rating">⭐ <strong>综合评分:</strong> 4.9/5</p>
+                    <div class="pros-cons">
+                        <p class="pros">👍 <strong>推荐理由:</strong> 极致奢华, 私人沙滩, 每栋别墅均带泳池, 服务无可挑剔, 亲子设施完善。</p>
+                        <p class="cons">⚠️ <strong>缺点:</strong> 价格非常昂贵; 位置相对偏远。</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="hotel-card">
+                 <span class="image-disclaimer"></span>
+                <div class="hotel-info">
+                    <h3>苏梅岛悦榕庄酒店 (Banyan Tree Samui)</h3>
+                    <p class="location">📍 <strong>位置:</strong> 拉迈海滩 (Lamai Beach) 南端</p>
+                    <p class="check-in">📅 <strong>入住日期推荐:</strong> 6月底</p>
+                    <div class="price-details">
+                        <p>💰 <strong>最低价格 (RMB税后):</strong> </p>
+                        <ul>
+                            <li>住5付4</li>
+                            <li>豪华泳池别墅: ¥4708/晚</li>
+                            <li>一隅海景泳池别墅: ¥5179/晚</li>
+                            <li>局部海景泳池别墅: ¥5744/晚</li>
+                            <li>海景泳池别墅: ¥6026/晚</li>
+                        </ul>
+                    </div>
+                    <div class="facilities">
+                        <p>👨‍👩‍👧‍👦 <strong>亲子设施:</strong> 海龟儿童俱乐部 (Rangers' Club, 适合4-11岁, 提供室内外活动、手工艺、游戏), 儿童泳池, 儿童菜单, 保姆服务。</p>
+                        <p>🧘‍♂️ <strong>成人设施:</strong> Banyan Tree Spa (雨林水疗), 健身房, 瑜伽课程, 主泳池, 私人沙滩, Saffron 泰式餐厅 (招牌), The Edge 全日餐厅, Sands 沙滩餐厅。</p>
+                    </div>
+                    <p class="opening-year">🕰️ <strong>开店时间:</strong> 2010年</p>
+                    <p class="rating">⭐ <strong>综合评分:</strong> 4.7/5</p>
+                    <div class="pros-cons">
+                        <p class="pros">👍 <strong>推荐理由:</strong> 坐拥私人海湾, 全泳池别墅设计, 泰式建筑风格, 水疗出色, 亲子设施好。</p>
+                        <p class="cons">⚠️ <strong>缺点:</strong> 别墅区依山而建, 部分别墅位置较高, 需电瓶车; 拉迈海滩公共区域有时较热闹。</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="hotel-card">
+                 <span class="image-disclaimer"></span>
+                <div class="hotel-info">
+                    <h3>苏梅岛丽思卡尔顿酒店 (The Ritz-Carlton, Koh Samui)</h3>
+                    <p class="location">📍 <strong>位置:</strong> 曾蒙海滩 (Choeng Mon Beach)</p>
+                    <p class="check-in">📅 <strong>入住日期推荐:</strong> 6月底</p>
+                    <div class="price-details">
+                        <p>💰 <strong>最低价格 (RMB税后):</strong> </p>
+                        <ul>
+                            <li>花园套房: ¥3077/晚</li>
+                            <li>精选露台套房: ¥3313/晚</li>
+                            <li>热带泳池别墅: ¥4497/晚</li>
+                            <li>豪华泳池别墅: ¥5444/晚</li>
+                        </ul>
+                    </div>
+                    <div class="facilities">
+                        <p>👨‍👩‍👧‍👦 <strong>亲子设施:</strong> Ritz Kids 儿童俱乐部 (设施先进, 活动多样, 如寻宝、烹饪、科学实验), 儿童泳池及滑梯, 迷你高尔夫, 儿童泰拳课程, 家庭影院。</p>
+                        <p>🧘‍♂️ <strong>成人设施:</strong> Spa Village Koh Samui (特色水疗), 健身中心, 泰拳馆, 2个主泳池, 多个餐饮选择 (Pak Tai 南泰餐厅, Shook! 国际美食等), 私人沙滩区。</p>
+                    </div>
+                    <p class="opening-year">🕰️ <strong>开店时间:</strong> 2017年</p>
+                    <p class="rating">⭐ <strong>综合评分:</strong> 4.8/5</p>
+                    <div class="pros-cons">
+                        <p class="pros">👍 <strong>推荐理由:</strong> 占地广阔, 设施现代奢华, 拥有独特的“泳池河”, 泰拳体验, 亲子项目新颖。</p>
+                        <p class="cons">⚠️ <strong>缺点:</strong> 度假村面积大, 部分区域需步行或电瓶车, 部分海景房视野可能被植被遮挡。</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="hotel-card">
+                 <span class="image-disclaimer"></span>
+                <div class="hotel-info">
+                    <h3>苏梅岛康莱德度假酒店 (Conrad Koh Samui)</h3>
+                    <p class="location">📍 <strong>位置:</strong> 塔林甘海滩 (Taling Ngam Beach) 西南海岸</p>
+                    <p class="check-in">📅 <strong>入住日期推荐:</strong> 6月底</p>
+                    <div class="price-details">
+                        <p>💰 <strong>最低价格 (RMB税后):</strong> </p>
+                        <ul>
+                            <li>三晚</li>
+                            <li>单卧室日落泳池别墅: ¥3086/晚</li>
+                            <li>海景单卧室泳池别墅: ¥3436/晚</li>
+                            <li>五岛景单卧室泳池别墅: ¥3778/晚</li>
+                            <li>两晚</li>
+                            <li>单卧室日落泳池别墅: ¥4536/晚</li>
+                            <li>海景单卧室泳池别墅: ¥5051/晚</li>
+                            <li>五岛景单卧室泳池别墅: ¥5567/晚</li>
+                        </ul>
+                    </div>
+                    <div class="facilities">
+                        <p>👨‍👩‍👧‍👦 <strong>亲子设施:</strong> 小海龟俱乐部 (Little Turtle Club, 提供简单活动和玩具), 儿童菜单, 保姆服务, 私人泳池。</p>
+                        <p>🧘‍♂️ <strong>成人设施:</strong> Conrad Spa, 健身中心, 主泳池, Jahn 泰式餐厅 (获奖), Zest 全日餐厅, Azure Bar & Grill 池畔餐厅, 水上活动。</p>
+                    </div>
+                    <p class="opening-year">🕰️ <strong>开店时间:</strong> 2011年</p>
+                    <p class="rating">⭐ <strong>综合评分:</strong> 4.6/5</p>
+                    <div class="pros-cons">
+                        <p class="pros">👍 <strong>推荐理由:</strong> 所有别墅均面向大海, 拥有壮丽日落景观和私人泳池, 私密性强。</p>
+                        <p class="cons">⚠️ <strong>缺点:</strong> 位置非常偏僻, 出入不便; 度假村内坡度大, 依赖电瓶车; 沙滩小且多礁石。</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="brochure-footer">
+    </footer>
+</body>
+</html>
